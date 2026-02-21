@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eternal SMP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Minecraft-style pixel font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body, h1, h2, h3, p, a, button {
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, #1b1035, #000000);
+            color: gold;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 10px auto;
+        }
+
+        .banner {
+            width: 250px; 
+            margin: 20px auto;
+            border: 2px solid gold;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #8b0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-shadow: 1px 1px #000;
+            cursor: pointer;
+        }
+
+        .discord-button {
+            background: #5865F2;
+        }
+
+        .shader-button {
+            background: #4CAF50;
+        }
+
+        .copy-button {
+            background: #DAA520;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .notice {
+            background: #2a1a00;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            border: 1px solid gold;
+        }
+
+        .empire-card {
+            background: #140c2a;
+            margin: 20px auto;
+            padding: 25px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            border: 2px solid gold;
+            text-align: left;
+        }
+
+        .empire-card h3 {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- NEW Header Image -->
+    <img src="https://i.imgur.com/Vfy8Ohu.png" alt="Eternal SMP Header" class="header-image">
+
+    <a href="https://add.aternos.org/EternalSMPB" class="button" target="_blank">
+        Join the SMP
+    </a>
+
+    <a href="https://discord.gg/HXUA5DhuDc" class="button discord-button" target="_blank">
+        Join Our Discord
+    </a>
+</header>
+
+<div class="section">
+    <div class="notice">
+        <strong>Only for Bedrock Edition.</strong><br>
+        Java Edition support is YET to be added.<br>
+        Best Experienced with Shaders.
+    </div>
+
+    <h2>Recommended Shader</h2>
+
+    <a href="https://www.mediafire.com/file/c13ak5co5rcublo/Patched_Shader_V1.mcpack/file"
+       class="button shader-button"
+       target="_blank">
+        Shader
+    </a>
+
+    <p>
+        Patch Shaders By LukeiscoolMC,<br>
+        only works with MBLOADER.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Server Info</h2>
+    <p>
+        <strong>IP:</strong> EternalSMPB.aternos.me<br>
+        <strong>Port:</strong> 56713
+    </p>
+
+    <button class="button copy-button" onclick="copyToClipboard('EternalSMPB.aternos.me')">
+        Copy IP
+    </button>
+
+    <button class="button copy-button" onclick="copyToClipboard('56713')">
+        Copy Port
+    </button>
+</div>
+
+<div class="section">
+    <h2>Featured Empire</h2>
+
+    <!-- Greater Byzantine Empire Flag -->
+    <img src="https://i.imgur.com/xUd2om7.png" alt="Greater Byzantine Empire Flag" class="banner">
+
+    <div class="empire-card">
+        <h3>🏛 Greater Byzantine Empire</h3>
+        <p><strong>Leader:</strong> Emperor Luke of Greater Byzantium</p>
+        <p><strong>Commander:</strong> CommanderAxle</p>
+        <p><strong>Status:</strong> Restoring Imperial Glory</p>
+        <p><strong>Founded:</strong> 2026</p>
+        <p>
+            Under the golden double-headed eagle,
+            the empire rises once more. Its armies stand disciplined,
+            its banners shine in purple and gold,
+            and its legacy shall be eternal.
+        </p>
+    </div>
+</div>
+
+<footer>
+    © 2026 Eternal SMP | Glory Is Eternal
+</footer>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Copied: ' + text);
+        });
+    }
+</script>
+
+</body>
+</html>
