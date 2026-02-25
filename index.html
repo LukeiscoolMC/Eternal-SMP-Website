@@ -4,16 +4,13 @@
     <title>Eternal SMP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Minecraft-style pixel font -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Minecraftia Font -->
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
 
     <style>
-        body, h1, h2, h3, p, a, button {
-            font-family: 'Press Start 2P', cursive;
-        }
-
         body {
             margin: 0;
+            font-family: 'Minecraftia', monospace;
             background: linear-gradient(to bottom, #1b1035, #000000);
             color: gold;
             text-align: center;
@@ -26,73 +23,78 @@
         .header-image {
             width: 100%;
             max-width: 600px;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 20px auto;
+        }
+
+        .section {
+            padding: 30px 20px;
+        }
+
+        .notice {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 2px solid gold;
+            border-radius: 8px;
         }
 
         .banner {
-            width: 250px; 
+            width: 250px;
             margin: 20px auto;
-            border: 2px solid gold;
-            border-radius: 5px;
+            border: 3px solid gold;
+        }
+
+        .empire-card {
+            background: rgba(20, 12, 42, 0.95);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            border: 3px solid gold;
+            box-shadow: 5px 5px 0px #000;
+            text-align: left;
         }
 
         .button {
             display: inline-block;
             margin: 10px;
-            padding: 12px 25px;
-            background: #8b0000;
-            color: white;
+            padding: 12px 20px;
+            background: linear-gradient(#ffd700, #daa520);
+            color: black;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-shadow: 1px 1px #000;
+            border: 3px solid black;
+            box-shadow: inset -3px -3px rgba(0,0,0,0.3);
             cursor: pointer;
+            font-family: 'Minecraftia', monospace;
+            font-size: 12px;
+        }
+
+        .button:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .button:active {
+            transform: translateY(2px);
+            box-shadow: inset 3px 3px rgba(0,0,0,0.4);
         }
 
         .discord-button {
-            background: #5865F2;
+            background: linear-gradient(#7289da, #5865F2);
+            color: white;
         }
 
         .shader-button {
-            background: #4CAF50;
+            background: linear-gradient(#6aff6a, #2ecc40);
         }
 
         .copy-button {
-            background: #DAA520;
-        }
-
-        .section {
-            padding: 40px 20px;
-        }
-
-        .notice {
-            background: #2a1a00;
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 600px;
-            border-radius: 8px;
-            border: 1px solid gold;
-        }
-
-        .empire-card {
-            background: #140c2a;
-            margin: 20px auto;
-            padding: 25px;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 12px;
-            border: 2px solid gold;
-            text-align: left;
-        }
-
-        .empire-card h3 {
-            font-size: 18px;
-            text-align: center;
+            background: #ffffff;
         }
 
         footer {
             padding: 20px;
-            font-size: 12px;
+            font-size: 9px;
             opacity: 0.7;
         }
     </style>
@@ -100,15 +102,14 @@
 <body>
 
 <header>
-    <!-- NEW Header Image -->
     <img src="https://i.imgur.com/Vfy8Ohu.png" alt="Eternal SMP Header" class="header-image">
 
     <a href="https://add.aternos.org/EternalSMPB" class="button" target="_blank">
-        Join the SMP
+        ▶ JOIN SMP
     </a>
 
     <a href="https://discord.gg/HXUA5DhuDc" class="button discord-button" target="_blank">
-        Join Our Discord
+        Join Discord
     </a>
 </header>
 
@@ -135,52 +136,39 @@
 
 <div class="section">
     <h2>Server Info</h2>
-    <p>
-        <strong>IP:</strong> EternalSMPB.aternos.me<br>
-        <strong>Port:</strong> 56713
-    </p>
 
-    <button class="button copy-button" onclick="copyToClipboard('EternalSMPB.aternos.me')">
-        Copy IP
+    <p><strong>IP:</strong><br>EternalSMPB.aternos.me</p>
+    <button class="button copy-button"
+        onclick="navigator.clipboard.writeText('EternalSMPB.aternos.me')">
+        📋 Copy IP
     </button>
 
-    <button class="button copy-button" onclick="copyToClipboard('56713')">
-        Copy Port
+    <p style="margin-top:20px;"><strong>Port:</strong><br>56713</p>
+    <button class="button copy-button"
+        onclick="navigator.clipboard.writeText('56713')">
+        📋 Copy Port
     </button>
 </div>
 
 <div class="section">
     <h2>Featured Empire</h2>
 
-    <!-- Greater Byzantine Empire Flag -->
-    <img src="https://i.imgur.com/xUd2om7.png" alt="Greater Byzantine Empire Flag" class="banner">
+    <img src="https://i.imgur.com/xUd2om7.png"
+         alt="Greater Byzantine Empire Flag"
+         class="banner">
 
     <div class="empire-card">
-        <h3>🏛 Greater Byzantine Empire</h3>
+        <p><strong>Empire:</strong> Greater Byzantine Empire</p>
         <p><strong>Leader:</strong> Emperor Luke of Greater Byzantium</p>
         <p><strong>Commander:</strong> CommanderAxle</p>
         <p><strong>Status:</strong> Restoring Imperial Glory</p>
         <p><strong>Founded:</strong> 2026</p>
-        <p>
-            Under the golden double-headed eagle,
-            the empire rises once more. Its armies stand disciplined,
-            its banners shine in purple and gold,
-            and its legacy shall be eternal.
-        </p>
     </div>
 </div>
 
 <footer>
     © 2026 Eternal SMP | Glory Is Eternal
 </footer>
-
-<script>
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => {
-            alert('Copied: ' + text);
-        });
-    }
-</script>
 
 </body>
 </html>
